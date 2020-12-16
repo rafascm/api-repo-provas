@@ -1,9 +1,8 @@
-import { Request, Response, Router } from "express";
+import { getAllTests } from "@controllers/tests";
+import { Router } from "express";
 
 const test = Router();
 
-test.get("/", async (req: Request, res: Response) => {
-  res.send("halloo").status(200);
-});
+test.get("/", getAllTests);
 
 export default test;

@@ -1,9 +1,8 @@
-import { Request, Response, Router } from "express";
+import { getCategories } from "@controllers/categories";
+import { Router } from "express";
 
 const categories = Router();
 
-categories.get("/", async (req: Request, res: Response) => {
-  res.send("categories").status(200);
-});
+categories.get("/", getCategories);
 
 export default categories;

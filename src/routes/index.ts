@@ -5,7 +5,6 @@ import test from "./tests";
 const routes = Router();
 
 routes.use("/api/tests", test);
-routes.use('/api/categories', categories)
-
+routes.use("/api/categories", categories);
 
 export default routes;
