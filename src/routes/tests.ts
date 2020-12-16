@@ -1,8 +1,8 @@
 import { getAllTests } from "@controllers/tests";
 import { Router } from "express";
 
-const test = Router();
+const router = Router();
 
-test.get("/", getAllTests);
+router.get("/", getAllTests);
 
-export default test;
+export default router;

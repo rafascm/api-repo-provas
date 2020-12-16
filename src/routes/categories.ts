@@ -1,8 +1,8 @@
 import { getCategories } from "@controllers/categories";
 import { Router } from "express";
 
-const categories = Router();
+const router = Router();
 
-categories.get("/", getCategories);
+router.get("/", getCategories);
 
-export default categories;
+export default router;
