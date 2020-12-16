@@ -35,9 +35,9 @@ CREATE TABLE "categories" (
 );
 
 CREATE TABLE "subjects_professors" (
-  "id" serial NOT NULL
+  "id" serial NOT NULL,
 	"id_subject" bigint NOT NULL,
-	"id_professor" bigint NOT NULL
+	"id_professor" bigint NOT NULL,
   CONSTRAINT "subjects_professors_pk" PRIMARY KEY ("id")
 ) WITH (
   OIDS=FALSE
