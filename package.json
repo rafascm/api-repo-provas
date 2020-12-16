@@ -1,0 +1,27 @@
+{
+  "name": "api-repo-provas",
+  "version": "1.0.0",
+  "main": "/src/server.ts",
+  "repository": "https://github.com/rafascm/api-repo-provas.git",
+  "author": "Rafael Mendes <mendesrafa.c@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.9",
+    "@types/node": "^14.14.14",
+    "eslint": "^7.15.0",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "ts-node-dev": "^1.1.1"
+  },
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --ignore-watch node_modules src/server.ts",
+    "build": "tsc"
+  }
+}
