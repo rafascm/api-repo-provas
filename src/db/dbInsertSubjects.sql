@@ -1,0 +1,27 @@
+INSERT INTO
+  subjects (name)
+VALUES
+  ('Cálculo I'),
+  ('Cálculo II'),
+  ('Cálculo III'),
+  ('Cálculo IV'),
+  ('Matemática Combinatória'),
+  ('Álgebra Linear'),
+  ('Análise de EDO'),
+  ('Análise de EDP'),
+  ('Computação Concorrente'),
+  ('Computação I'),
+  ('Computação II'),
+  ('Computação Concorrente'),
+  ('Lógica'),
+  ('Inteligência Artificial'),
+  ('Programação Linear'),
+  ('Programação Não-Linear'),
+  ('Cálculo Numérico'),
+  ('Estrutura de Dados'),
+  ('Algoritmos e Grafos'),
+  ('Computadores e Programação'),
+  ('Sistemas Operacionais'),
+  ('Numeros Inteiros e Criptografia'),
+  ('Linguagens Formais'),
+  ('Computação Quântica');
