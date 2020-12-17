@@ -11,5 +11,9 @@ const getAllTests: RequestHandler = async (_req: Request, res: Response) => {
   }
 };
 
+const postTest: RequestHandler = async (_req: Request, res: Response) => {
+  res.send("post").status(201);
+};
+
 // eslint-disable-next-line import/prefer-default-export
-export { getAllTests };
+export { getAllTests, postTest };
