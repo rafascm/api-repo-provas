@@ -38,5 +38,4 @@ const getSubjectsArray = async (id: string): Promise<Subject[]> => {
   }
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export { getSubject, getSubjectsArray };

@@ -35,9 +35,33 @@ const getTestsBySubject: RequestHandler = async (
   }
 };
 
-const postTest: RequestHandler = async (_req: Request, res: Response) => {
-  res.send("post").status(201);
+const postTest: RequestHandler = async (req: Request, res: Response) => {
+  const { name, idCategory, idProfessor, idSubject, url } = req.body;
+  const valid = !!(name && url && idCategory && idProfessor && idSubject);
+
+  if (!valid) res.sendStatus(422);
+  else {
+    try {
+      const test = new Test(name, idCategory, idSubject, idProfessor, url);
+      const query = `
+        INSERT INTO tests
+        (name, id_category, id_subject, id_professor, url)
+        VALUES
+        ($1, $2, $3, $4, $5)
+      `;
+
+      await db.query(query, [
+        test.name,
+        test.idCategory,
+        test.idSubject,
+        test.idProfessor,
+        test.url,
+      ]);
+      res.sendStatus(201);
+    } catch {
+      res.sendStatus(500);
+    }
+  }
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export { getAllTests, getTestsBySubject, postTest };

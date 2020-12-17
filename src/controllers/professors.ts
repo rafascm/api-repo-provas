@@ -36,5 +36,5 @@ const getProfessorsArray = async (id: string): Promise<Professor[]> => {
     return [];
   }
 };
-// eslint-disable-next-line import/prefer-default-export
+
 export { getProfessor, getProfessorsArray };
