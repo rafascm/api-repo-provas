@@ -3,6 +3,6 @@ import { Router } from "express";
 
 const router = Router();
 
-router.get("/", getSubject);
+router.get("/:id", getSubject);
 
 export default router;

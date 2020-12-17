@@ -5,7 +5,7 @@ import { Request, RequestHandler, Response } from "express";
 import { getSubjectsArray } from "./subjects";
 
 const getProfessor: RequestHandler = async (req: Request, res: Response) => {
-  const { id } = req.body;
+  const { id } = req.params;
   if (!id) res.sendStatus(422);
   else {
     try {
@@ -21,7 +21,7 @@ const getProfessor: RequestHandler = async (req: Request, res: Response) => {
   }
 };
 
-const getProfessorsArray = async (id: number): Promise<Professor[]> => {
+const getProfessorsArray = async (id: string): Promise<Professor[]> => {
   try {
     const query = `
     SELECT p.id, p.name FROM professors AS p
